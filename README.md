@@ -1,66 +1,53 @@
-## Foundry
+# Uniswap V1 - Decentralized Exchange (DEX)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized exchange (DEX) inspired by **Uniswap V1**, built with **Solidity** and tested using **Foundry**. This project replicates the core functionalities of Uniswap V1, including liquidity provision, token swapping, and price discovery, to provide a deeper understanding of how automated market makers (AMMs) work in decentralized finance (DeFi).
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
+- **Token Swapping:** Swap between ERC20 tokens and Ether using the AMM model.
+- **Liquidity Provision:** Add and remove liquidity for ERC20/Ether pairs.
+- **Price Discovery:** Determine token prices based on the constant product formula \( x * y = k \).
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## Technologies Used
+- **Solidity**: Smart contract development.
+- **Foundry**: A fast and modular testing framework.
+- **OpenZeppelin**: Standard ERC20 token implementation.
 
-## Usage
+---
 
-### Build
+## Setup and Installation
 
-```shell
-$ forge build
-```
+### Prerequisites
+- [Foundry](https://getfoundry.sh/) installed.
+- Node.js (for dependency management).
+- A basic understanding of Solidity and AMMs.
 
-### Test
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/arnavkirti/UniSwap-V1
+   cd UniSwap-V1
+   ```
+2. **Install dependencies**
+   ```bash
+   forge install
+   ```
+3. **Build the Project**
+   ```bash
+   forge build
+   ```
+---
+### Contracts Deployed
+- **Token.sol** - 0x371BCFCC65a1A7C95bA5261D247b2D820f0b05f5
+- **Exchange.sol** - 0x36269441df3591abEE04526eBe3F3cafE07350e5
 
-```shell
-$ forge test
-```
+---
+### Acknowledgements
+This project was inspired by the Uniswap V1 whitepaper and implementation:
 
-### Format
+[Uniswap V1](https://docs.uniswap.org/contracts/v1/overview)
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Also, LearnWeb3.io tutorials were very helpful in building this.
